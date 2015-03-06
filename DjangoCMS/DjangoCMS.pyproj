@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>DjangoCMS</Name>
+    <RootNamespace>DjangoCMS</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5558076e-0ebe-4fb5-8127-0ab8a0259882</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="static\" />
+    <Folder Include="static\css\" />
+    <Folder Include="static\images\" />
+    <Folder Include="static\images\corners\" />
+    <Folder Include="static\js\" />
+    <Folder Include="static\js\plugins\" />
+    <Folder Include="static\js\plugins\gadget\" />
+    <Folder Include="static\js\plugins\gadget\lang\" />
+    <Folder Include="static\themes\" />
+    <Folder Include="static\themes\ecobusiness\" />
+    <Folder Include="static\themes\ecobusiness\css\" />
+    <Folder Include="static\themes\ecobusiness\images\" />
+    <Folder Include="static\themes\nautica05\" />
+    <Folder Include="static\themes\nautica05\css\" />
+    <Folder Include="static\themes\nautica05\images\" />
+    <Folder Include="static\themes\nautica05\images\bg\" />
+    <Folder Include="static\themes\vanlang\" />
+    <Folder Include="static\themes\vanlang\css\" />
+    <Folder Include="static\themes\vanlang\css\colors\" />
+    <Folder Include="static\themes\vanlang\files\" />
+    <Folder Include="static\themes\vanlang\fonts\" />
+    <Folder Include="static\themes\vanlang\images\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\slides\partners\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\news\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\oanh\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\slides\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\slides\building\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\slides\social\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\slides\top\" />
+    <Folder Include="static\themes\vanlang\images\vanlang\sprites\" />
+    <Folder Include="static\themes\vanlang\js\" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\admin\" />
+    <Folder Include="templates\themes\" />
+    <Folder Include="templates\themes\ecobusiness\" />
+    <Folder Include="templates\themes\nautica05\" />
+    <Folder Include="templates\themes\vanlang\" />
+    <Folder Include="third_party\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.yaml" />
+    <Content Include="index.yaml" />
+    <Content Include="RELEASE_NOTES" />
+    <Content Include="static\css\default.css" />
+    <Content Include="static\images\corners\bl.gif" />
+    <Content Include="static\images\corners\br.gif" />
+    <Content Include="static\images\corners\tl.gif" />
+    <Content Include="static\images\corners\tr.gif" />
+    <Content Include="static\images\fail.jpg" />
+    <Content Include="static\images\favicon.ico" />
+    <Content Include="static\images\fileicons.zip" />
+    <Content Include="static\images\logo.png" />
+    <Content Include="static\images\trash.gif" />
+    <Content Include="static\js\fck_config.js" />
+    <Content Include="static\js\plugins\gadget\fckplugin.js" />
+    <Content Include="static\js\plugins\gadget\gadget.html" />
+    <Content Include="static\js\plugins\gadget\gadget.png" />
+    <Content Include="static\js\plugins\gadget\lang\en.js" />
+    <Content Include="static\themes\ecobusiness\css\common.css" />
+    <Content Include="static\themes\ecobusiness\css\reset-min.css" />
+    <Content Include="static\themes\ecobusiness\images\building.gif" />
+    <Content Include="static\themes\ecobusiness\images\designby.gif" />
+    <Content Include="static\themes\ecobusiness\images\footer_bg.jpg" />
+    <Content Include="static\themes\ecobusiness\images\footer_list.jpg" />
+    <Content Include="static\themes\ecobusiness\images\h3_bg_tall.jpg" />
+    <Content Include="static\themes\ecobusiness\images\left_nav_bg.jpg" />
+    <Content Include="static\themes\ecobusiness\images\logo_bg.gif" />
+    <Content Include="static\themes\ecobusiness\images\logo_right.gif" />
+    <Content Include="static\themes\ecobusiness\images\product.jpg" />
+    <Content Include="static\themes\ecobusiness\images\rightbox_bg.jpg" />
+    <Content Include="static\themes\ecobusiness\images\top_bg.jpg" />
+    <Content Include="static\themes\nautica05\css\html.css" />
+    <Content Include="static\themes\nautica05\css\layout.css" />
+    <Content Include="static\themes\nautica05\images\bg\blank.gif" />
+    <Content Include="static\themes\nautica05\images\bg\header.gif" />
+    <Content Include="static\themes\nautica05\images\bg\header_image.jpg" />
+    <Content Include="static\themes\nautica05\images\bg\light_body.gif" />
+    <Content Include="static\themes\nautica05\images\bg\menu.gif" />
+    <Content Include="static\themes\nautica05\images\bg\submenu1.gif" />
+    <Content Include="static\themes\nautica05\images\bg\submenu2.gif" />
+    <Content Include="static\themes\nautica05\images\icon_samples.gif" />
+    <Content Include="static\themes\nautica05\images\logo.gif" />
+    <Content Include="static\themes\vanlang\css\bootstrap-responsive.min.css" />
+    <Content Include="static\themes\vanlang\css\bootstrap.min.css" />
+    <Content Include="static\themes\vanlang\css\colors\color-gray.css" />
+    <Content Include="static\themes\vanlang\css\font-awesome.min.css" />
+    <Content Include="static\themes\vanlang\css\fonts.css" />
+    <Content Include="static\themes\vanlang\css\jquery.bxslider.css" />
+    <Content Include="static\themes\vanlang\css\navigation-style-1.css" />
+    <Content Include="static\themes\vanlang\css\navigation-style-2.css" />
+    <Content Include="static\themes\vanlang\css\navigation-style-3.css" />
+    <Content Include="static\themes\vanlang\css\navigation-style-4.css" />
+    <Content Include="static\themes\vanlang\css\prettyPhoto.css" />
+    <Content Include="static\themes\vanlang\css\style.css" />
+    <Content Include="static\themes\vanlang\files\hosonangluc.pdf" />
+    <Content Include="static\themes\vanlang\fonts\fontawesome-webfont.eot" />
+    <Content Include="static\themes\vanlang\fonts\fontawesome-webfont.svg" />
+    <Content Include="static\themes\vanlang\fonts\fontawesome-webfont.ttf" />
+    <Content Include="static\themes\vanlang\fonts\fontawesome-webfont.woff" />
+    <Content Include="static\themes\vanlang\fonts\FontAwesome.otf" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-bold-webfont.eot" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-bold-webfont.svg" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-bold-webfont.ttf" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-bold-webfont.woff" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-boldcond-webfont.eot" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-boldcond-webfont.svg" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-boldcond-webfont.ttf" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-boldcond-webfont.woff" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-roman-webfont.eot" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-roman-webfont.svg" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-roman-webfont.ttf" />
+    <Content Include="static\themes\vanlang\fonts\helveticaneue-roman-webfont.woff" />
+    <Content Include="static\themes\vanlang\fonts\Lato-Light.eot" />
+    <Content Include="static\themes\vanlang\fonts\Lato-Light.ttf" />
+    <Content Include="static\themes\vanlang\fonts\Lato-Light.woff" />
+    <Content Include="static\themes\vanlang\fonts\monster.woff2" />
+    <Content Include="static\themes\vanlang\fonts\monsterrat_bold.woff2" />
+    <Content Include="static\themes\vanlang\fonts\montserrat_normal.woff2" />
+    <Content Include="static\themes\vanlang\fonts\museo-500-webfont.eot" />
+    <Content Include="static\themes\vanlang\fonts\museo-500-webfont.svg" />
+    <Content Include="static\themes\vanlang\fonts\museo-500-webfont.ttf" />
+    <Content Include="static\themes\vanlang\fonts\museo-500-webfont.woff" />
+    <Content Include="static\themes\vanlang\fonts\museo-700-webfont.eot" />
+    <Content Include="static\themes\vanlang\fonts\museo-700-webfont.svg" />
+    <Content Include="static\themes\vanlang\fonts\museo-700-webfont.ttf" />
+    <Content Include="static\themes\vanlang\fonts\museo-700-webfont.woff" />
+    <Content Include="static\themes\vanlang\images\ajax-loader.gif" />
+    <Content Include="static\themes\vanlang\images\ICDOCX.PNG" />
+    <Content Include="static\themes\vanlang\images\idocx.jpg" />
+    <Content Include="static\themes\vanlang\images\pdf.png" />
+    <Content Include="static\themes\vanlang\images\responsive-menu.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\banner-1.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\banner-2.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\favicon.ico" />
+    <Content Include="static\themes\vanlang\images\vanlang\favicon2.ico" />
+    <Content Include="static\themes\vanlang\images\vanlang\home_icon.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\icon-technology.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\image-partner-bg.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\image-partner-precio.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\logo-contact.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\logo.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\logo2.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\logo2b.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\logo3.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\map.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\map.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\news\1.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\news\2.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\news\3.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\news\4.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\oanh\Benh vien Quoc Te Hanh Phuc.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\office.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\building\3.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\partners\1.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\partners\2.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\partners\3.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\partners\4.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\partners\5.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\recruitment.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\building\1.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\building\2.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\building\4.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\social\1.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\social\2.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\social\3.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\top\1.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\top\2.jpg" />
+    <Content Include="static\themes\vanlang\images\vanlang\slides\top\3.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\splogos.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-conerstone.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-contact-address.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-contact-letter.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-contact-manager.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-contact-phone.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-design.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-doc-management.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-expert.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-gold-partner.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-grant-management.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-integrate.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-key.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-monitor.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-offline.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-organisation.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-partner-tech.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-precio-logo.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-project-management.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-sector.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\icon-user-friendly.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\logo.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\sprites\timestamp.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\structure.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\top-image-1.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\vanlang_logo.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\vanlang_logo_2.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\vanlang_logo_3.png" />
+    <Content Include="static\themes\vanlang\images\vanlang\vanlang_logo_4.png" />
+    <Content Include="static\themes\vanlang\js\appear.js" />
+    <Content Include="static\themes\vanlang\js\bootstrap.min.js" />
+    <Content Include="static\themes\vanlang\js\isotope.js" />
+    <Content Include="static\themes\vanlang\js\jquery.blockui.js" />
+    <Content Include="static\themes\vanlang\js\jquery.bxslider.js" />
+    <Content Include="static\themes\vanlang\js\jquery.bxslider.min.js" />
+    <Content Include="static\themes\vanlang\js\jquery.cycle.all.js" />
+    <Content Include="static\themes\vanlang\js\jquery.easing-1.3.pack.js" />
+    <Content Include="static\themes\vanlang\js\jquery.glide.js" />
+    <Content Include="static\themes\vanlang\js\jquery.jigowatt.js" />
+    <Content Include="static\themes\vanlang\js\jquery.js" />
+    <Content Include="static\themes\vanlang\js\jquery.maximage.js" />
+    <Content Include="static\themes\vanlang\js\jquery.parallax-1.1.3.js" />
+    <Content Include="static\themes\vanlang\js\jquery.prettyPhoto.js" />
+    <Content Include="static\themes\vanlang\js\jquery.sticky.js" />
+    <Content Include="static\themes\vanlang\js\jquery.tweet.js" />
+    <Content Include="static\themes\vanlang\js\modernizr.js" />
+    <Content Include="static\themes\vanlang\js\scripts.js" />
+    <Content Include="static\themes\vanlang\js\script_new.js" />
+    <Content Include="static\themes\vanlang\js\skrollr.js" />
+    <Content Include="static\themes\vanlang\js\sscr.js" />
+    <Content Include="templates\403.html" />
+    <Content Include="templates\404.html" />
+    <Content Include="templates\500.html" />
+    <Content Include="templates\admin\base.html" />
+    <Content Include="templates\admin\bulk_edit_users.html" />
+    <Content Include="templates\admin\edit_group.html" />
+    <Content Include="templates\admin\edit_page.html" />
+    <Content Include="templates\admin\edit_sidebar.html" />
+    <Content Include="templates\admin\edit_user.html" />
+    <Content Include="templates\admin\filter_users.html" />
+    <Content Include="templates\admin\help.html" />
+    <Content Include="templates\admin\index.html" />
+    <Content Include="templates\admin\list_groups.html" />
+    <Content Include="templates\admin\memcache_info.html" />
+    <Content Include="templates\admin\recently_modified.html" />
+    <Content Include="templates\admin\view_group.html" />
+    <Content Include="templates\base.html" />
+    <Content Include="templates\sitemap.html" />
+    <Content Include="templates\themes\ecobusiness\base.html" />
+    <Content Include="templates\themes\ecobusiness\page.html" />
+    <Content Include="templates\themes\nautica05\base.html" />
+    <Content Include="templates\themes\nautica05\page.html" />
+    <Content Include="templates\themes\vanlang\base.html" />
+    <Content Include="templates\themes\vanlang\en.html" />
+    <Content Include="templates\themes\vanlang\index.html" />
+    <Content Include="templates\themes\vanlang\index_old.html" />
+    <Content Include="templates\themes\vanlang\page.html" />
+    <Content Include="third_party\fckeditor.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="configuration.py" />
+    <Compile Include="debug_wrapper.py" />
+    <Compile Include="forms.py" />
+    <Compile Include="main.py" />
+    <Compile Include="middleware.py" />
+    <Compile Include="models.py" />
+    <Compile Include="settings.py" />
+    <Compile Include="urls.py" />
+    <Compile Include="utility.py" />
+    <Compile Include="validators.py" />
+    <Compile Include="views\admin.py" />
+    <Compile Include="views\main.py" />
+    <Compile Include="views\__init__.py" />
+    <Compile Include="zip_handler.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

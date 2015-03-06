@@ -1,0 +1,221 @@
+
+/* Navigation Style 1 */
+	
+	#logo {
+		background:url(../images/logo.png) 0 0px #222222;
+		background-size:65px 65px;
+		position:absolute;
+		width:65px;
+		height:65px;
+		left:50%;
+		margin-left:-32px;
+		z-index:100;
+		display:block;
+	}
+	
+	#logo a{
+		width:65px;
+		height:65px;
+		position:absolute;
+	}
+	
+	.precio-logo
+	{
+		float:left;
+		margin-right:60px;
+	}
+	
+	.logo-back {
+		transform: rotateY(-180deg);
+	}
+
+	#navigation-sticky-wrapper {
+		background-color: #fcfcfc;
+	}
+
+	.navbar-inner {
+		background: none;
+		box-shadow: none !important;
+		min-height: 45px;
+		line-height: 20px !important;
+		transition: all 0.3s ease-out 0s;
+		border-bottom: none !important;
+		background: none;
+		box-shadow: none;
+		z-index:10;		
+		max-width:1200px;
+		width:100%;
+		margin: 20px auto 40px;
+	}
+
+	.navbar {
+		position: relative;
+	}
+	
+	#navigation
+	{
+		background:#fcfcfc;
+	}
+	
+	.navbar .nav {
+		text-align:center;		
+		float:left;
+	}
+
+	.navbar .nav > li {
+		float:left;
+		display:inline-block;
+		margin-top:auto;
+		margin-bottom:auto;
+		border-right: 1px solid #fff;
+	}
+
+        .navbar .nav > li:last-child
+        {
+            margin-right:0;
+        }
+
+	.navbar .nav > li > a {
+		font-family: arial, verdana, sans-serif;
+		text-transform:uppercase;
+		font-weight:400;
+		font-size:15px;
+		color: #fff;
+		display: block;
+		transition: all 0.3s ease-out 0s;
+		text-shadow: none;
+		padding:0 20px;
+		background-color:#f707db;
+	}
+	
+	.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+		background-color:#7cc245;
+		color: #fff;
+		box-shadow: none;
+		transition: all 0.3s ease-out 0s;	
+	}
+	
+	.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+		background: none;
+		box-shadow: none;
+		background-color:#7cc245;
+		color: #fff;
+		text-decoration: underline;
+		transition: all 0.3s ease-out 0s;
+	}	
+	
+	.navbar .show-menu {
+		float: right;
+		width:30px;
+		margin: 7px 8px 7px 10px;
+		height: 31px;
+		padding:2px;
+		background:url(../images/responsive-menu.png) no-repeat 2px 2px;
+		background-size:30px 30px;
+		cursor:pointer;
+		border-radius:3px;
+		opacity:0.7;
+		display:none
+	}
+	
+	.navbar .show-menu:hover {
+		opacity:1;
+	}
+	
+	
+	
+@media only screen and (max-width: 1199px) {	
+
+	.precio-logo
+	{
+		margin-right:20px;
+	}
+
+    .navbar .nav > li
+    {
+        margin-right:15px;
+    }
+
+        .navbar .nav > li:last-child
+        {
+            margin-right:0;
+        }
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+	
+	.navbar-inner {
+		min-height: 45px!important;
+		padding:0!important;
+	}
+	
+	.nav-collapse {
+		background-color:#7cc245;
+		padding:0;
+	}
+	
+	.navbar .nav > li {
+		display: inline-block;
+		float: left;
+		width:100%;
+	}
+	
+	.navbar .nav > li:last-child {
+		border-bottom:none;
+	}
+	
+	.navbar .nav {
+		text-align: left;
+		width: 100%;
+	}
+	
+	.navbar .nav > li > a {
+		padding: 8px 10px;
+		font-family: 'Open Sans',serif;
+		font-size:12px;
+        color:#fff;
+        background-color:inherit;
+	}
+
+        .navbar .nav > li > a:hover,
+        .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+            background-color:#f707db;
+        }
+        
+	
+	.navbar .show-menu {
+		display:block;
+	}
+	
+	.navbar .nav-collapse .nav.pull-right {
+		float: left;
+		margin:10px 0;
+	}
+	
+	.precio-logo
+	{
+		margin-left:10px;
+		margin-bottom:10px;
+	}
+	
+
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+	
+}
+
+
+
+@media only screen and (max-width: 479px) {
+    .navbar .show-menu, .precio-logo
+    {
+        margin-top:14px;
+    }	
+}	
