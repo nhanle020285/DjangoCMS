@@ -2163,6 +2163,7 @@ ul.capacities img{
     height:40px;
 }
 
+
 @media only screen and (min-width: 1200px) {
 	.wrraper-main
 	{
@@ -2198,6 +2199,12 @@ ul.capacities img{
 
     .precio-logo{
         margin-left:40px;
+    }
+
+    .languages
+    {
+        margin-top:25px;
+        margin-right:100px !important;
     }
 
 }

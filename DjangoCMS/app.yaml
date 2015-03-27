@@ -1,5 +1,5 @@
-application: vanlangtechvn
-version: 2
+application: python-cms-2015
+version: 1
 runtime: python
 api_version: 1
 

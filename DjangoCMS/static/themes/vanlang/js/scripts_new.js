@@ -5,50 +5,51 @@ $(window).load(function () {
     $(".mask").delay(1000).fadeOut("slow");
 });
 
+var topSlider = null;
+var buildingSlider = null;
+var partnersSlider = null;
+var socialSlider = null;
+
 function playSiler() {
-    $('#placeHolderContent .bxslider').bxSlider({
+    topSlider = $('#placeHolderContent .bxslider').bxSlider({
         auto: true,
         pause: 6000
     });
 
-    $('#placeHolderContent .bxsliderbuilding').bxSlider({
+    buildingSlider = $('#placeHolderContent .bxsliderbuilding').bxSlider({
         auto: true,
         pager: false
     });
 
-    $('#placeHolderContent .bxsliderpartners').bxSlider({
+    partnersSlider = $('#placeHolderContent .bxsliderpartners').bxSlider({
         auto: true,
         pager: false
     });
 
-    $('#placeHolderContent .bxslidersocial').bxSlider({
+    socialSlider = $('#placeHolderContent .bxslidersocial').bxSlider({
         auto: true,
         pager: false
     });
 
-    //$('.bxslider').bxSlider({
-    //    auto: true,
-    //    pause: 6000
-    //});
+}
 
-    //$('.bxsliderbuilding').bxSlider({
-    //    auto: true,
-    //    pager: false
-    //});
-
-    //$('.bxsliderpartners').bxSlider({
-    //    auto: true,
-    //    pager: false
-    //});
-
-    //$('.bxslidersocial').bxSlider({
-    //    auto: true,
-    //    pager: false
-    //});
+function reloadSliders() {
+    if (topSlider !== null) {
+        topSlider.reloadSlider();
+    }
+    if (buildingSlider !== null) {
+        buildingSlider.reloadSlider();
+    }
+    if (partnersSlider !== null) {
+        partnersSlider.reloadSlider();
+    }
+    if (socialSlider !== null) {
+        socialSlider.reloadSlider();
+    }
 }
 
 $(document).ready(function () {
-    $("#placeHolderContent section").html($("#home").html());
+    $("#placeHolderContent section > div").html($("#home").html());
     playSiler();
     //$('.slider').glide({ autoplay: 4000, arrowRightText: '<i class="fa fa-chevron-right"></i>', arrowLeftText: '<i class="fa fa-chevron-left"></i>' });
 
@@ -69,6 +70,15 @@ $(document).ready(function () {
         return false;
     });
 
+    $(".show-menu").click(function () {
+        if ($("div.nav-collapse").height() == "0") {
+            $("div.nav-collapse").css("height", "auto");
+        }
+        else {
+            $("div.nav-collapse").css("height", "0");
+        }
+    })
+
 });
 
 
@@ -88,37 +98,42 @@ $(function () {
 //Navigation Scrolling
 $(function () {
     $('.nav a, .nav li a, #home-center a, a.move, .precio-logo').bind('click', function (event) {
-        var $anchor = $(this);
-        if ($anchor.attr('href') === '#home') {
-            $("#placeHolderContent section").html($("#home").html());
-            playSiler();
+        if ($(this).attr('href') === '#home') {
+            location.reload(false);
         }
-        else if ($anchor.attr('href') === '#vanlang-about') {
-            $("#placeHolderContent section").html($("#vanlang-about").html());
+        else {
+            var $anchor = $(this);
+            $anchor.closest("ul").find(">li").removeClass("active");
+            $anchor.parent().addClass("active");
+            $("#placeHolderContent section > div").hide();
+            if ($anchor.attr('href') === '#home') {
+                //$("#placeHolderContent section > div").html($("#home").html());
+                //playSiler();
+                //reloadSliders();
+                location.reload(false);
+            }
+            else if ($anchor.attr('href') === '#vanlang-about') {
+                $("#placeHolderContent section > div").html($("#vanlang-about").html());
+            }
+            else if ($anchor.attr('href') === '#productandservice') {
+                $("#placeHolderContent section > div").html($("#productandservice").html());
+            }
+            else if ($anchor.attr('href') === '#capacity-profile') {
+                $("#placeHolderContent section > div").html($("#capacity-profile").html());
+            }
+            else if ($anchor.attr('href') === '#recruitment') {
+                $("#placeHolderContent section > div").html($("#recruitment").html());
+            }
+            else if ($anchor.attr('href') === '#contact') {
+                $("#placeHolderContent section > div").html($("#contact").html());
+            }
             fadingElements();
-        }
-        else if ($anchor.attr('href') === '#productandservice') {
-            $("#placeHolderContent section").html($("#productandservice").html());
-            fadingElements();
-        }
-        else if ($anchor.attr('href') === '#capacity-profile') {
-            $("#placeHolderContent section").html($("#capacity-profile").html());
-            fadingElements();
-        }
-        else if ($anchor.attr('href') === '#recruitment') {
-            $("#placeHolderContent section").html($("#recruitment").html());
-            fadingElements();
-        }
-        else if ($anchor.attr('href') === '#contact') {
-            $("#placeHolderContent section").html($("#contact").html());
-            fadingElements();
+            $("#placeHolderContent section > div").slideToggle("slow");
         }
 
-        //$('html, body').stop().animate({
-        //    //scrollTop: $anchor.attr('href') === '#home' ? ($($anchor.attr('href')).offset().top - $("#navigation").height() - 20) : ($($anchor.attr('href')).offset().top - $("#navigation").height())
-        //    scrollTop: $(".navbar .show-menu").is(':visible') ? $(".text-logo").is(':visible') ? $($anchor.attr('href')).offset().top - 160 : $($anchor.attr('href')).offset().top - 81
-        //        : $anchor.attr('href') === '#home' ? $($anchor.attr('href')).offset().top - 190 : $($anchor.attr('href')).offset().top - 170
-        //}, 1500, 'easeInOutExpo');
+        if ($(".show-menu").is(':visible')) {
+            $("div.nav-collapse").css("height", "0");
+        }
 
         event.preventDefault();
     });
@@ -233,7 +248,9 @@ $(document).ready(function () {
 
 
 //Navigation Dropdown
-$('.nav a.colapse-menu1').click(function () { $(".nav-collapse").collapse("hide") });
+//$('.nav a.colapse-menu1').click(function () {
+//    $(".nav-collapse").collapse("hide");
+//});
 
 $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
 
@@ -341,86 +358,6 @@ function fadingElements() {
         $(this).parents('.alertboxes').animate({ opacity: 0 }, 300).animate({ height: "0px" });
     });
 }
-
-$(document).ready(function () {
-    //nhan
-    //Elements Fading
-    //$('.element_from_top').each(function () {
-    //    $(this).appear(function () {
-    //        $(this).delay(150).animate({ opacity: 1, top: "0px" }, 1000);
-    //    });
-    //});
-
-    //$('.element_from_bottom').each(function () {
-    //    $(this).appear(function () {
-    //        $(this).delay(150).animate({ opacity: 1, bottom: "0px" }, 1000);
-    //    });
-    //});
-
-
-    //$('.element_from_left').each(function () {
-    //    $(this).appear(function () {
-    //        $(this).delay(150).animate({ opacity: 1, left: "0px" }, 1000);
-    //    });
-    //});
-
-
-    //$('.element_from_right').each(function () {
-    //    $(this).appear(function () {
-    //        $(this).delay(150).animate({ opacity: 1, right: "0px" }, 1000);
-    //    });
-    //});
-
-    //$('.element_fade_in').each(function () {
-    //    $(this).appear(function () {
-    //        $(this).delay(150).animate({ opacity: 1, right: "0px" }, 1000);
-    //    });
-    //});
-
-
-    ////Animated Progress Bars
-    //$('.bar li').each(function () {
-    //    $(this).appear(function () {
-    //        $(this).animate({ opacity: 1, left: "0px" }, 1200);
-    //        var b = $(this).find("span").attr("data-width");
-    //        $(this).find("span").animate({
-    //            width: b + "%"
-    //        }, 1700, "easeOutCirc");
-    //    });
-    //});
-
-
-    ////Animated Counters
-    //$('.counters').each(function () {
-    //    $(".timer .count").appear(function () {
-    //        var counter = $(this).html();
-    //        $(this).countTo({
-    //            from: 0,
-    //            to: counter,
-    //            speed: 2000,
-    //            refreshInterval: 60,
-    //        });
-    //    });
-    //});
-
-
-    ////Fading Out AlertBox
-    //$('.shortcode_alertbox').find('.box_close').click(function () {
-    //    $(this).parents('.alertboxes').animate({ opacity: 0 }, 300).animate({ height: "0px" });
-    //});
-
-
-
-});
-
-
-
-
-
-
-
-
-
 
 $(window).load(function () {
 

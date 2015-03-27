@@ -28,6 +28,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="dist\" />
+    <Folder Include="dist\bower_components\" />
+    <Folder Include="dist\bower_components\requirejs\" />
+    <Folder Include="dist\fonts\" />
+    <Folder Include="dist\images\" />
+    <Folder Include="dist\scripts\" />
+    <Folder Include="dist\views\" />
     <Folder Include="static\" />
     <Folder Include="static\css\" />
     <Folder Include="static\images\" />
@@ -44,6 +51,12 @@
     <Folder Include="static\themes\nautica05\css\" />
     <Folder Include="static\themes\nautica05\images\" />
     <Folder Include="static\themes\nautica05\images\bg\" />
+    <Folder Include="static\themes\precio\" />
+    <Folder Include="static\themes\precio\images\" />
+    <Folder Include="static\themes\precio\scripts\" />
+    <Folder Include="static\themes\precio\scripts\controllers\" />
+    <Folder Include="static\themes\precio\styles\" />
+    <Folder Include="static\themes\precio\views\" />
     <Folder Include="static\themes\vanlang\" />
     <Folder Include="static\themes\vanlang\css\" />
     <Folder Include="static\themes\vanlang\css\colors\" />
@@ -66,12 +79,42 @@
     <Folder Include="templates\themes\ecobusiness\" />
     <Folder Include="templates\themes\nautica05\" />
     <Folder Include="templates\themes\vanlang\" />
+    <Folder Include="test\" />
+    <Folder Include="test\spec\" />
+    <Folder Include="test\spec\controllers\" />
+    <Folder Include="test\spec\services\" />
     <Folder Include="third_party\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.yaml" />
+    <Content Include="bower.json" />
+    <Content Include="dist\.htaccess" />
+    <Content Include="dist\404.html" />
+    <Content Include="dist\bower_components\requirejs\bower.json" />
+    <Content Include="dist\bower_components\requirejs\README.md" />
+    <Content Include="dist\bower_components\requirejs\require.js" />
+    <Content Include="dist\favicon.ico" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="dist\images\yeoman.c582c4d1.png" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\robots.txt" />
+    <Content Include="dist\scripts\angular-aria.js" />
+    <Content Include="dist\scripts\angular-messages.js" />
+    <Content Include="dist\scripts\angular-mocks.js" />
+    <Content Include="dist\scripts\bootstrap.js" />
+    <Content Include="dist\scripts\build.txt" />
+    <Content Include="dist\scripts\main.js" />
+    <Content Include="dist\views\about.html" />
+    <Content Include="dist\views\main.html" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="gulpfile.js" />
     <Content Include="index.yaml" />
+    <Content Include="package.json" />
     <Content Include="RELEASE_NOTES" />
     <Content Include="static\css\default.css" />
     <Content Include="static\images\corners\bl.gif" />
@@ -112,6 +155,21 @@
     <Content Include="static\themes\nautica05\images\bg\submenu2.gif" />
     <Content Include="static\themes\nautica05\images\icon_samples.gif" />
     <Content Include="static\themes\nautica05\images\logo.gif" />
+    <Content Include="static\themes\precio\.buildignore" />
+    <Content Include="static\themes\precio\.htaccess" />
+    <Content Include="static\themes\precio\404.html" />
+    <Content Include="static\themes\precio\favicon.ico" />
+    <Content Include="static\themes\precio\images\yeoman.png" />
+    <Content Include="static\themes\precio\index.html" />
+    <Content Include="static\themes\precio\robots.txt" />
+    <Content Include="static\themes\precio\scripts\app.js" />
+    <Content Include="static\themes\precio\scripts\controllers\about.js" />
+    <Content Include="static\themes\precio\scripts\controllers\main.js" />
+    <Content Include="static\themes\precio\scripts\main.js" />
+    <Content Include="static\themes\precio\styles\main.css" />
+    <Content Include="static\themes\precio\styles\main.scss" />
+    <Content Include="static\themes\precio\views\about.html" />
+    <Content Include="static\themes\precio\views\main.html" />
     <Content Include="static\themes\vanlang\css\bootstrap-responsive.min.css" />
     <Content Include="static\themes\vanlang\css\bootstrap.min.css" />
     <Content Include="static\themes\vanlang\css\colors\color-gray.css" />
@@ -246,7 +304,7 @@
     <Content Include="static\themes\vanlang\js\jquery.tweet.js" />
     <Content Include="static\themes\vanlang\js\modernizr.js" />
     <Content Include="static\themes\vanlang\js\scripts.js" />
-    <Content Include="static\themes\vanlang\js\script_new.js" />
+    <Content Include="static\themes\vanlang\js\scripts_new.js" />
     <Content Include="static\themes\vanlang\js\skrollr.js" />
     <Content Include="static\themes\vanlang\js\sscr.js" />
     <Content Include="templates\403.html" />
@@ -276,6 +334,12 @@
     <Content Include="templates\themes\vanlang\index.html" />
     <Content Include="templates\themes\vanlang\index_old.html" />
     <Content Include="templates\themes\vanlang\page.html" />
+    <Content Include="templates\themes\vanlang\base_old.html" />
+    <Content Include="test\.jshintrc" />
+    <Content Include="test\spec\controllers\aboutSpec.js" />
+    <Content Include="test\spec\controllers\mainSpec.js" />
+    <Content Include="test\spec\services\myserviceSpec.js" />
+    <Content Include="test\test-main.js" />
     <Content Include="third_party\fckeditor.zip" />
   </ItemGroup>
   <ItemGroup>
