@@ -1,6 +1,5 @@
 'use strict';
-
-  
+ 
 var appConfig = {
     rootPath: require('./bower.json').appPath || 'app',
     dist: 'public'
