@@ -42,6 +42,7 @@ gulp.task('clean-dist', function () {
     .pipe($.clean());
 });
 
+
 gulp.task('copy-to-dist', function () {
   return gulp.src(appConfig.rootPath + '/{,*/}*.*')
         .pipe($.copy(appConfig.dist));
