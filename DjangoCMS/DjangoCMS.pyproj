@@ -87,6 +87,11 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".bowerrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".jshintrc" />
+    <Content Include=".travis.yml" />
+    <Content Include=".yo-rc.json" />
     <Content Include="app.yaml" />
     <Content Include="bower.json" />
     <Content Include="dist\.htaccess" />

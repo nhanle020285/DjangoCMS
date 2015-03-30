@@ -1,0 +1,11 @@
+{
+  "generator-angular-require": {
+    "appPath": "app"
+  },
+  "generator-precio-angular-require": {
+    "appPath": "app\\Precio"
+  },
+  "generator-nhan-angular-require": {
+    "appPath": "static/themes/precio"
+  }
+}
